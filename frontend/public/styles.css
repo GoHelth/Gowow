@@ -1,0 +1,114 @@
+/* ✅ إعدادات الخطوط والهيكل الأساسي */
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: center;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ✅ إعدادات الوضع الفاتح والداكن */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --primary-color: #007bff;
+    --secondary-color: #ff9800;
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --primary-color: #00bcd4;
+    --secondary-color: #ffeb3b;
+}
+
+/* ✅ شريط التنقل */
+header {
+    background: var(--primary-color);
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    transition: background 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* ✅ زر الوضع الليلي */
+.toggle-dark-mode {
+    background: var(--secondary-color);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+/* ✅ تحسين قسم البطل (Hero) */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    transition: background 0.3s ease;
+}
+
+/* ✅ زر رئيسي */
+.btn-primary {
+    background: var(--secondary-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #ff5722;
+    transform: scale(1.05);
+}
+
+/* ✅ الحركات (Animations) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ✅ تحسين شكل الفوتر */
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    transition: background 0.3s ease;
+}

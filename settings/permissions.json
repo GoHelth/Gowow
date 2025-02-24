@@ -1,0 +1,32 @@
+{
+    "roles": {
+      "admin": {
+        "description": "👑 المدير: لديه وصول كامل للنظام",
+        "permissions": {
+          "products": ["create", "read", "update", "delete"],
+          "sales": ["create", "read", "update", "delete", "approve"],
+          "users": ["create", "read", "update", "delete", "assign_roles"],
+          "settings": ["read", "update"]
+        }
+      },
+      "staff": {
+        "description": "👨‍💼 الموظف: يمكنه إدارة المبيعات والمخزون",
+        "permissions": {
+          "products": ["read", "update"],
+          "sales": ["create", "read", "update"],
+          "users": [],
+          "settings": ["read"]
+        }
+      },
+      "user": {
+        "description": "🧑‍💻 المستخدم العادي: وصول محدود فقط",
+        "permissions": {
+          "products": ["read"],
+          "sales": ["read"],
+          "users": [],
+          "settings": []
+        }
+      }
+    }
+  }
+  
