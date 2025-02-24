@@ -1,20 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
-import "./index.css"; // ✅ استيراد ملف الأنماط
-import ErrorBoundary from "./components/ErrorBoundary"; // ✅ منع انهيار التطبيق عند حدوث أخطاء
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './index.css'; // تأكدنا من وجود الملف
 
-// ✅ إنشاء الجذر الرئيسي
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// ✅ تحميل التطبيق داخل `StrictMode` لالتقاط الأخطاء المحتملة
-root.render(
+ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <ErrorBoundary>
-                <App />
-            </ErrorBoundary>
-        </BrowserRouter>
-    </React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
 );
